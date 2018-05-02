@@ -189,12 +189,12 @@ struct matws : public matrix_base<matws<NR,NC> >
 
   FP operator()(unsigned int row, unsigned int col) const
   {
-    return data[row * ROW_STRIDE + col];
+    return data[row * NUM_ROWS + col];
   }
 
   FP& operator()(unsigned int row, unsigned int col)
   {
-    return data[row * ROW_STRIDE + col];
+    return data[row * NUM_ROWS + col];
   }
 
   FP operator[](unsigned int row) const
